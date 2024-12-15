@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React from 'react';
+import React, { memo } from 'react';
 import { colors, formatCurrency, formatDate } from '../Constant';
 import useColorPalette from '../Hooks/useColorPallete';
 import { Transaction } from '../Contexts/AppContext';
@@ -30,7 +30,7 @@ const Card = ({ item, onPress }:{ item: Transaction, onPress : (params : Transac
 	);
 };
 
-export default Card;
+export default memo(Card); // memo component
 
 const styles = StyleSheet.create({
 	itemContainer: {

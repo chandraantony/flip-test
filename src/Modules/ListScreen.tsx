@@ -47,7 +47,7 @@ const ListScreen = ({ navigation }: Props) => {
 
 	const [modalVisible, setModalVisible] = useState(false);
 	const fetchData = useRef(() => { });
-	fetchData.current = () => getData(); // do thing just satisfy lint;
+	fetchData.current = () => getData(); // do thing just satisfy the lint || either way juct calla "getData()" on useEffect and disable the lint;
 
 	useEffect(() => {
 		fetchData.current();
